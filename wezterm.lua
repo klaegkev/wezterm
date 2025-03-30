@@ -11,7 +11,7 @@ config.window_padding = {
 }
 
 config.window_decorations = "TITLE|RESIZE"
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.7
 config.macos_window_background_blur = 30
 
 -- Windows
