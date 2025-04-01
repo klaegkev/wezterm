@@ -2,6 +2,7 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
+config.color_scheme = "Catppuccin Mocha"
 config.enable_tab_bar = false
 config.window_padding = {
 	left = 0,
@@ -11,7 +12,7 @@ config.window_padding = {
 }
 
 config.window_decorations = "TITLE|RESIZE"
-config.window_background_opacity = 0.7
+--config.window_background_opacity = 0.8
 config.macos_window_background_blur = 30
 
 -- Windows
