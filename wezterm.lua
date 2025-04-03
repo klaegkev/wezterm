@@ -3,6 +3,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.color_scheme = "Catppuccin Mocha"
+config.window_decorations = "TITLE|RESIZE"
 config.enable_tab_bar = false
 config.window_padding = {
 	left = 0,
@@ -10,13 +11,14 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
-
-config.window_decorations = "TITLE|RESIZE"
 --config.window_background_opacity = 0.8
+
+-- MacOs
 config.macos_window_background_blur = 30
 
 -- Windows
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+	-- return { "powershell.exe" }
 	config.default_prog =
 		{ "powershell", "-NoExit", "-Command", "starship init powershell | out-string | Invoke-Expression" }
 end
